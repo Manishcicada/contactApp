@@ -1,0 +1,41 @@
+.header{
+  display: flex;
+  position: fixed;
+  background-color: rgb(228, 199, 66);
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 60px;
+  align-items: center;
+}
+
+.header h2{
+  margin-left: 20px;
+}
+
+.nav{
+  position: absolute;
+  right: 200px;
+}
+
+.nav li{
+  display: inline;
+}
+
+.nav li button{
+  background-color: transparent;
+  border: none;
+  font-size: 12pt;
+  margin-left: 20px;
+  padding: 8px;
+}
+
+.nav li button:hover{
+  background-color: lightcoral;
+  border-radius: 10px;
+}
+
+.active{
+  background-color: lightcoral;
+  border-radius: 10px;
+}
