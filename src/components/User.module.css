@@ -1,0 +1,55 @@
+
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.userDetails{
+  display:flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.userDetails img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.textDetails{
+  display: block;
+}
+
+.textDetails p{
+  margin: 0px;
+}
+
+.actionButtons{
+  display: flex;
+  gap: 20px;
+}
+
+.addToFavourites{
+  background-color: rgb(217, 189, 30);
+  border: none;
+  border-radius: 20px;
+}
+
+.deleteButton{
+  background-color: transparent;
+  border: none;
+}
+
+.deleteButton:hover{
+  cursor: pointer;
+}
+
+.deleteButton img{
+  height: 30px;
+  width: 30px;
+}

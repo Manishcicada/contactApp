@@ -1,0 +1,7 @@
+.main{
+  display: flex;
+  margin: 20px;
+}
+.main ul{
+  list-style-type: none;
+}

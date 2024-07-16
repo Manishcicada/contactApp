@@ -30,6 +30,5 @@ export default function AddContact(){
         </main>
       </div>
     </div>
-    
   );
 }
