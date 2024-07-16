@@ -39,3 +39,43 @@
   background-color: lightcoral;
   border-radius: 10px;
 }
+
+@media all and (max-width: 800px){
+  .header h2{
+    margin-left: 5px;
+  }
+  .nav{
+    right: 100px;
+  }
+}
+
+@media all and (max-width: 600px){
+  .nav{
+    right: 50px;
+  }
+
+  .nav li button{
+    font-size: 11pt;
+    margin-left: 8px;
+    padding: 7px 4px 7px 4px;
+  }
+}
+
+@media all and (max-width: 500px){
+  .nav{
+    right: 10px;
+  }
+}
+
+@media all and (max-width: 418px){
+  .nav{
+    right: 5px;
+  }
+  .nav li button{
+    margin-left: 0.5px;
+    padding: 7px 2px 7px 2px;
+  }
+  .header h2{
+    font-size: 13pt;
+  }
+}
