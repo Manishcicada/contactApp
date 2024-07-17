@@ -1,7 +1,16 @@
 import classes from './Header.module.css';
+import { useDispatch } from 'react-redux';
+import { pageAction } from '../../store/activePage';
 
 
 export default function Header(){
+
+  const dispatch = useDispatch();
+
+  function handlePageChange(payload){
+    dispatch(pageAction.changePage(payload));
+  }
+
   return(
     <>
       <header className = {classes.header}>
@@ -9,17 +18,23 @@ export default function Header(){
         <nav className = {classes.nav}>
           <ul>
             <li>
-              <button>
+              <button 
+                onClick={()=>handlePageChange("AddContact")}
+              >
                 Add Contact
               </button>
             </li>
             <li>
-              <button>
+              <button
+                onClick={()=>handlePageChange("ContactList")}
+              >
                 Contact List
               </button>
             </li>
             <li>
-              <button>
+              <button
+                onClick={()=>handlePageChange("Favourites")}
+              >
                 Favourites
               </button>
             </li>
