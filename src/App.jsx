@@ -1,6 +1,6 @@
 import AddContact from "./components/AddContact.jsx";
-import ContactList from "./components/ContactList.jsx";
 import Container from "./components/Container.jsx";
+import Favourites from "./components/Favourites.jsx";
 import Header from "./components/Header.jsx";
 
 
@@ -10,7 +10,7 @@ function App() {
     <>
       <Header/>
       <Container color={"brown"}>
-        <AddContact/>
+        <Favourites/>
       </Container>
     </>
   )
