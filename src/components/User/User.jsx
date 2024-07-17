@@ -1,7 +1,7 @@
 import classes from './User.module.css';
 
-import userImage from '../assets/user.png';
-import deleteUser from '../assets/deleteUser.png';
+import userImage from '../../assets/user.png';
+import deleteUser from '../../assets/deleteUser.png';
 
 export default function User({userName, userEmail, favourite}){
   return(

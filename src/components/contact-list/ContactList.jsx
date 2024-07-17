@@ -1,5 +1,5 @@
 import classes from './ContactList.module.css';
-import UserBlock from '../UserBlock.jsx';
+import UserBlock from '../User/UserBlock.jsx';
 
 const DUMMY_DATA = [
   { name: 'user1', email: 'user1@email.com', id: Math.random() },
@@ -17,7 +17,7 @@ export default function ContactList() {
           <button>Hide Contact</button>
         </div>
         <div className={classes.clearAll}>
-          <h3>3</h3>
+          <div className={classes.counter}><span>3</span></div>
           <button>Clear All</button>
         </div>
 
