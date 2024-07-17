@@ -53,3 +53,12 @@
   height: 30px;
   width: 30px;
 }
+
+@media all and (max-width: 450px){
+  .userInfo{
+    gap: 10px;
+  }
+  .actionButtons{
+    gap: 0px;
+  }
+}

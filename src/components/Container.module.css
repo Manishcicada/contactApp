@@ -1,0 +1,24 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(30%);
+}
+
+.container{
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: antiquewhite;
+  flex-direction: column;
+  border:none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+@media all and (max-width: 550px){
+  .container{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
