@@ -34,10 +34,17 @@
   gap: 20px;
 }
 
-.addToFavourites{
+.addToFavourites,
+.favourite{
+  color: white;
   background-color: rgb(217, 189, 30);
   border: none;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.favourite{
+  background-color: red;
 }
 
 .deleteButton{

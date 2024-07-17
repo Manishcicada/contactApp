@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(30%);
+  margin-top: 150px;
 }
 
 .container{

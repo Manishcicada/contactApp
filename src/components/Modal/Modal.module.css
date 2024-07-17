@@ -1,0 +1,31 @@
+.dialog{
+  width: 300px;
+  padding: 20px;
+}
+
+.message{
+  color: red;
+  font-weight: 1000;
+}
+
+.action{
+  display: flex;
+  width: 200px;
+  margin-left: 40px;
+  justify-content: space-between;
+}
+
+.action button{
+  border: none;
+  height: 30px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+.action button.yes{
+  background-color: red;
+}
+
+.action button.no{
+  background-color: rgb(53, 162, 53);
+}

@@ -11,7 +11,7 @@ export default function UserBlock({DUMMY_DATA}){
             <User 
             userName={user.name} 
             userEmail={user.email}
-            favourite={false}
+            favourite= {user.favourite}
             />
           </li>
         ))}

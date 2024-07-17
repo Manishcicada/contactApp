@@ -1,8 +1,14 @@
-.header{
+.header,
+.headerOnHide
+{
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   padding: 10px;
+}
+
+.headerOnHide{
+  width: 460px;
 }
 
 .input{
@@ -79,4 +85,14 @@
 
 .contactList button{
   background-color: blueviolet;
+}
+
+.hide{
+  display: none;
+}
+
+@media all and (max-width: 480px){
+  .headerOnHide{
+    width: 370px;
+  }
 }
