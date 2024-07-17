@@ -1,4 +1,4 @@
-import UserBlock from "./UserBlock";
+import UserBlock from "../UserBlock";
 import classes from './Favourites.module.css';
 
 const DUMMY_DATA = [

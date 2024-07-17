@@ -1,5 +1,5 @@
 import classes from './ContactList.module.css';
-import UserBlock from './UserBlock.jsx';
+import UserBlock from '../UserBlock.jsx';
 
 const DUMMY_DATA = [
   { name: 'user1', email: 'user1@email.com', id: Math.random() },

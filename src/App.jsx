@@ -1,7 +1,7 @@
-import AddContact from "./components/AddContact.jsx";
-import Container from "./components/Container.jsx";
-import Favourites from "./components/Favourites.jsx";
-import Header from "./components/Header.jsx";
+import AddContact from "./components/addContact/AddContact.jsx";
+import Container from "./components/container/Container.jsx";
+import Favourites from "./components/favourites/Favourites.jsx";
+import Header from "./components/header/Header.jsx";
 
 
 function App() {
