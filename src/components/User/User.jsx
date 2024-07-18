@@ -27,6 +27,8 @@ export default function User({ userName, userEmail, favourite }) {
     }
   }
 
+  let message = <p>Are you Sure, you want to delete <span className={classes.message}>{userName}</span></p>
+
   return (
     <>
       <div className={classes.userInfo}>
@@ -57,7 +59,7 @@ export default function User({ userName, userEmail, favourite }) {
       <Modal 
       open={open} 
       setOpen={setOpen} 
-      message={userName}
+      message={message}
       onConfirm={handleDeleteUser}
       />
     </>

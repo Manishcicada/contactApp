@@ -23,6 +23,7 @@ export default function ContactList() {
     setOpen(false);
   }
 
+  let message = <p>Are you Sure, you want to delete <span className={classes.message}>All Contacts</span></p>
   return (
     <>
       <header className={(hide|| number<1)?classes.headerOnHide:classes.header}>
@@ -44,7 +45,7 @@ export default function ContactList() {
       <Modal 
       open = {open} 
       setOpen={setOpen} 
-      message = "All Contacts"
+      message = {message}
       onConfirm={handleClearAll}
       />
     </>

@@ -44,6 +44,11 @@
   background-color: rgb(227, 171, 103);
 }
 
+.message{
+  color: red;
+  font-weight: 1000;
+}
+
 .clearAll,
 .contactList
 {

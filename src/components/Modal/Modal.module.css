@@ -3,11 +3,6 @@
   padding: 20px;
 }
 
-.message{
-  color: red;
-  font-weight: 1000;
-}
-
 .action{
   display: flex;
   width: 200px;

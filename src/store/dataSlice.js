@@ -27,6 +27,10 @@ const dataSlice = createSlice({
 
     clearAll(){
       return [];
+    },
+
+    replaceData(state, action){
+      state[action.payload.index] = action.payload.data;
     }
   }
 });

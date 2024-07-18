@@ -23,3 +23,11 @@ export function getFromLocalStorage(){
   const data = JSON.parse(getData);
   return data;
 }
+
+export function isAvailableEmail(state, data){
+  const index = state.findIndex(value=> value.email === data.email);
+  if(index>-1){
+    return index;
+  }
+  return "NOT_FOUND";
+}

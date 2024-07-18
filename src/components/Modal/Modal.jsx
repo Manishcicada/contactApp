@@ -23,7 +23,7 @@ export default function Modal({open, setOpen, onConfirm, message}){
       <dialog 
       className={classes.dialog}
       ref={dialog}>
-        <p>Are you Sure, you want to delete <span className={classes.message}>{message}</span></p>
+        {message}
         <div className={classes.action}>
           <button
             className={classes.yes}
