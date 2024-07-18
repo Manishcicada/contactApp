@@ -1,30 +1,31 @@
 import classes from './ContactList.module.css';
 import UserBlock from '../User/UserBlock.jsx';
 import Modal from '../Modal/Modal.jsx';
+import { dataActions } from '../../store/dataSlice.js';
 
 import { useState } from 'react';
-
-const DUMMY_DATA = [
-  { name: 'user1', email: 'user1@email.com', id: Math.random(),favourite: true },
-  { name: 'user2', email: 'user2@email.com', id: Math.random(),favourite: false },
-  { name: 'user3', email: 'user3@email.com', id: Math.random(),favourite: false },
-  { name: 'user4', email: 'user4@email.com', id: Math.random(),favourite: true },
-];
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 export default function ContactList() {
 
-  const number = DUMMY_DATA.length;
+  const data = useSelector(state=>state.data);
+  console.log(data);
+  const dispatch = useDispatch();
+  const number = data.length;
 
   const[open, setOpen] = useState(false);
   const[hide, setHide] = useState(false);
 
   function handleClearAll(){
+    console.log('cleared');
+    dispatch(dataActions.clearAll());
     setOpen(false);
   }
 
   return (
     <>
-      <header className={hide?classes.headerOnHide:classes.header}>
+      <header className={(hide|| number<1)?classes.headerOnHide:classes.header}>
         <div className={classes.contactList}>
           <h2>Contact List</h2>
           <button
@@ -39,7 +40,7 @@ export default function ContactList() {
         </div>
 
       </header>
-      {!hide && <UserBlock DUMMY_DATA={DUMMY_DATA} />}
+      {!hide && <UserBlock data={data} />}
       <Modal 
       open = {open} 
       setOpen={setOpen} 

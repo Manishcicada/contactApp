@@ -1,14 +1,21 @@
 import classes from './AddContact.module.css';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { dataActions } from '../../store/dataSlice';
 
 export default function AddContact() {
 
+  const dispatch = useDispatch();
+
   function handleSubmit(event){
     event.preventDefault();
-    console.log("Submitted");
 
     const fd = new FormData(event.target);
-    const data = Object.fromEntries(fd.entries());
+    const res = Object.fromEntries(fd.entries());
+    const id = Math.random();
+    const data = {...res, favourite: false, id: id};
+
+    dispatch(dataActions.addData(data));
   }
 
   return (

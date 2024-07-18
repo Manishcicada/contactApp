@@ -3,15 +3,28 @@ import userImage from '../../assets/user.png';
 import deleteUser from '../../assets/deleteUser.png';
 import Modal from '../Modal/Modal';
 
+import { useDispatch } from 'react-redux';
+import { dataActions } from '../../store/dataSlice';
+
 import { useState } from 'react';
 
 export default function User({ userName, userEmail, favourite }) {
 
+  const dispatch = useDispatch();
   const [open, setOpen] = useState();
 
   function handleDeleteUser(){
-    //
+    dispatch(dataActions.removeData({name: userName, email: userEmail, favourite}));
     setOpen(false);
+  }
+
+  function handleFavourite(){
+    if(!favourite){
+      dispatch(dataActions.addToFavourite({name: userName, email: userEmail, favourite}));
+    }
+    else{
+      dispatch(dataActions.removeFromFavourite({name: userName, email: userEmail, favourite}));
+    }
   }
 
   return (
@@ -25,7 +38,12 @@ export default function User({ userName, userEmail, favourite }) {
           </span>
         </div>
         <div className={classes.actionButtons}>
-          <button className={favourite?classes.favourite:classes.addToFavourites}>{favourite ? 'Remove From Favourites' : 'Add to Favourites'}</button>
+          <button 
+            className={favourite?classes.favourite:classes.addToFavourites}
+            onClick={handleFavourite}
+            >
+            {favourite ? 'Remove From Favourites' : 'Add to Favourites'}
+          </button>
           <button
             className={classes.deleteButton}
             onClick={()=>setOpen(true)}

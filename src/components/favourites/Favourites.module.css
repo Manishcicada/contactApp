@@ -1,8 +1,13 @@
-.header{
+.header,
+.noData{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+}
+
+.noData{
+  width: 460px;
 }
 
 .header h2{
@@ -18,4 +23,10 @@
   margin: 0px;
   align-items: center;
   justify-content: center;
+}
+
+@media all and (max-width: 480px){
+  .noData{
+    width: 370px;
+  }
 }

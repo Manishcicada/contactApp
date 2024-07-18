@@ -1,6 +1,8 @@
 import {createSlice} from '@reduxjs/toolkit';
 import { configureStore } from '@reduxjs/toolkit';
 
+import { dataReducer } from './dataSlice';
+
 const initialPage = {page: 'ContactList'};
 
 const pageSlice = createSlice({
@@ -16,6 +18,7 @@ const pageSlice = createSlice({
 const store = configureStore({
   reducer: {
     page: pageSlice.reducer,
+    data: dataReducer,
   }
 });
 
