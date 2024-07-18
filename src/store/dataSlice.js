@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { findIndexOfUser, removeDataUtil } from "../util/util";
+import {findIndexOfUser, getFromLocalStorage, removeDataUtil } from "../util/util";
 
-const data = [];
+const data = getFromLocalStorage()|| [];
 
 const dataSlice = createSlice({
   name: 'data',

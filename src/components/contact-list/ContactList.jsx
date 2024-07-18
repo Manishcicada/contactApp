@@ -6,11 +6,12 @@ import { dataActions } from '../../store/dataSlice.js';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { addToLocalStorage } from '../../util/util.js';
 
 export default function ContactList() {
 
   const data = useSelector(state=>state.data);
-  console.log(data);
+  addToLocalStorage(data);
   const dispatch = useDispatch();
   const number = data.length;
 
@@ -18,7 +19,6 @@ export default function ContactList() {
   const[hide, setHide] = useState(false);
 
   function handleClearAll(){
-    console.log('cleared');
     dispatch(dataActions.clearAll());
     setOpen(false);
   }

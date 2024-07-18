@@ -12,3 +12,14 @@ export function findIndexOfUser(data, state){
   const index = state.findIndex(value=> value.email === data.email);
   return index;
 }
+
+export function addToLocalStorage(data){
+  const sendData = JSON.stringify(data)
+  localStorage.setItem("contactData", sendData);
+}
+
+export function getFromLocalStorage(){
+  const getData = localStorage.getItem("contactData");
+  const data = JSON.parse(getData);
+  return data;
+}

@@ -2,6 +2,7 @@ import classes from './AddContact.module.css';
 import { useDispatch } from 'react-redux';
 
 import { dataActions } from '../../store/dataSlice';
+import { pageAction } from '../../store/activePage';
 
 export default function AddContact() {
 
@@ -16,6 +17,7 @@ export default function AddContact() {
     const data = {...res, favourite: false, id: id};
 
     dispatch(dataActions.addData(data));
+    dispatch(pageAction.changePage("ContactList"))
   }
 
   return (
